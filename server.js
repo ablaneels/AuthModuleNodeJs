@@ -9,12 +9,12 @@ app.use(express.json()); // This line is important
 
 // Your routes go here
 
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
-  });
+// app.listen(8080, () => {
+//     console.log('Server is running on port 8080');
+//   });
 
   app.use(cors({
-    origin: 'http://localhost:3001' // This will allow requests from 'http://localhost:3001' only
+    origin: 'http://localhost:8081' // This will allow requests from 'http://localhost:8081' only
   }));
 let users = [];
 
@@ -46,4 +46,4 @@ app.post('/login', async (req, res) => {
     }
 });
 
-app.listen(3000);
+app.listen(8080);
